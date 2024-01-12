@@ -9,4 +9,3 @@ Welcome to the Java Interview Preparation repository! Here, you'll find a collec
 - [Tricky Interview Questions](tricky-questions.md)
 - [Programming Questions](programming-questions.md)
 
-Feel free to explore each category to enhance your Java knowledge and prepare for your interviews.

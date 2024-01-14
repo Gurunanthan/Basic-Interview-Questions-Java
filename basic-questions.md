@@ -20,6 +20,7 @@ Heap memory is primarily used for the dynamic allocation of objects during the r
 
 **Stack Memory:**
 Stack memory, on the other hand, is employed for static memory allocation and holds local variables and references to objects within methods and blocks. Each thread in Java has its own stack, and the stack keeps track of the methods being called and their local variables. It operates on a Last-In-First-Out (LIFO) structure, where the last method called is the first one to be removed.</p>
+
 </details>
 
 <details>
@@ -38,6 +39,7 @@ In terms of language features, Java prioritizes simplicity and readability, lack
 Multithreading is integral to Java, with built-in support for creating and managing threads, while C++ also supports multithreading with variations between standards and implementations. Exception handling in Java is more structured, distinguishing between checked and unchecked exceptions, whereas C++ uses a combination of try, catch, and throw with a less rigid structure.
 
 These differences highlight distinct design philosophies and use cases, with Java emphasizing simplicity, platform independence</p>
+
 </details>
 <details>
   <summary>6. What are the default values assigned to variables and instances in Java?</summary>
@@ -60,8 +62,8 @@ These differences highlight distinct design philosophies and use cases, with Jav
   - Object references: null
 
 It's important to note that using local variables without initializing them can result in compilation errors, ensuring that developers explicitly assign values before using them in calculations or conditions.</p>
-</details>
 
+</details>
 
 <details>
   <summary>7. How does the JIT compiler work in Java?</summary>
@@ -77,6 +79,7 @@ lining, incorporating small and frequently called methods directly into the call
 An important aspect of the JIT compiler is its adaptive nature. It continuously monitors the program's behavior during runtime, adapting its optimization strategies based on feedback. If the behavior of the program changes, the JIT compiler can recompile and optimize the code accordingly.
 
 The JIT compiler's dynamic compilation and optimization contribute to the efficient execution of Java programs, providing a balance between platform independence and performance by generating native machine code tailored to the specific characteristics of the executing environment.</p>
+
 </details>
 
 <details>
@@ -84,54 +87,159 @@ The JIT compiler's dynamic compilation and optimization contribute to the effici
   <br>
   Java is a robust and versatile programming language known for several key features.
 
-  - **Platform Independence:**
-    Java code is designed to be platform-independent, allowing it to run on any device equipped with a Java Virtual Machine (JVM).
+- **Platform Independence:**
+  Java code is designed to be platform-independent, allowing it to run on any device equipped with a Java Virtual Machine (JVM).
 
-  - **Object-Oriented Paradigm:**
-    Java follows the object-oriented programming (OOP) paradigm, emphasizing principles like encapsulation, inheritance, and polymorphism.
+- **Object-Oriented Paradigm:**
+  Java follows the object-oriented programming (OOP) paradigm, emphasizing principles like encapsulation, inheritance, and polymorphism.
 
-  - **Multithreading Support:**
-    Java provides built-in support for multithreading, enabling the concurrent execution of multiple threads and enhancing program performance.
+- **Multithreading Support:**
+  Java provides built-in support for multithreading, enabling the concurrent execution of multiple threads and enhancing program performance.
 
-  - **Automatic Memory Management:**
-    One of Java's strengths is its automatic garbage collection mechanism, which helps manage memory efficiently and reduces the risk of memory leaks.
+- **Automatic Memory Management:**
+  One of Java's strengths is its automatic garbage collection mechanism, which helps manage memory efficiently and reduces the risk of memory leaks.
 
-  - **Rich Standard Library:**
-    Java comes with a comprehensive standard library that includes a wide range of classes and methods, simplifying development tasks and extending functionality.
+- **Rich Standard Library:**
+  Java comes with a comprehensive standard library that includes a wide range of classes and methods, simplifying development tasks and extending functionality.
 
-  - **Security Features:**
-    Java incorporates robust security features, including a sandbox for applet security, making it a suitable choice for secure applications.
+- **Security Features:**
+  Java incorporates robust security features, including a sandbox for applet security, making it a suitable choice for secure applications.
 
-  - **Portability:**
-    Following the "Write Once, Run Anywhere" (WORA) principle, Java allows code to be executed on various platforms without modification.
+- **Portability:**
+  Following the "Write Once, Run Anywhere" (WORA) principle, Java allows code to be executed on various platforms without modification.
 
-  - **Distributed Computing:**
-    Java supports the creation of distributed applications through features like Remote Method Invocation (RMI), facilitating communication between distributed components.
+- **Distributed Computing:**
+  Java supports the creation of distributed applications through features like Remote Method Invocation (RMI), facilitating communication between distributed components.
 
-  - **Dynamic Adaptability:**
-    Java applications can dynamically adapt to changing environments, supporting features like dynamic loading of classes.
+- **Dynamic Adaptability:**
+Java applications can dynamically adapt to changing environments, supporting features like dynamic loading of classes.
 </details>
-
 
 <details>
   <summary>9. How many types of memory areas are allocated by JVM?</summary>
   <br>
   Java Virtual Machine (JVM) allocates memory in various areas to manage the execution of Java programs. The main types of memory areas include:
 
-  - **Class(Method) Area:**
-    Class Area stores per-class structures such as the runtime constant pool, field, method data, and the code for methods.
+- **Class(Method) Area:**
+  Class Area stores per-class structures such as the runtime constant pool, field, method data, and the code for methods.
 
-  - **Heap:**
-    Heap is the runtime data area where memory is allocated to objects created during program execution.
+- **Heap:**
+  Heap is the runtime data area where memory is allocated to objects created during program execution.
 
-  - **Stack:**
-    Java Stack stores frames, holding local variables and partial results. It plays a crucial role in method invocation and return. Each thread has a private JVM stack, created concurrently with the thread. A new frame is created for each method invocation, and a frame is destroyed when the method invocation completes.
+- **Stack:**
+  Java Stack stores frames, holding local variables and partial results. It plays a crucial role in method invocation and return. Each thread has a private JVM stack, created concurrently with the thread. A new frame is created for each method invocation, and a frame is destroyed when the method invocation completes.
 
-  - **Program Counter Register:**
-    The PC (program counter) register contains the address of the Java virtual machine instruction currently being executed.
+- **Program Counter Register:**
+  The PC (program counter) register contains the address of the Java virtual machine instruction currently being executed.
 
-  - **Native Method Stack:**
-    Native Method Stack contains all the native methods used in the application.
+- **Native Method Stack:**
+  Native Method Stack contains all the native methods used in the application.
 
 </details>
 
+<details>
+  <summary>10. What is classloader?</summary>
+  <br>
+  <p style="background-color: #f2f2f2; margin-left: 20px;">Classloader is a subsystem of JVM (Java Virtual Machine) used to load class files. When a Java program is executed, it is first loaded by the classloader. There are three built-in classloaders in Java:
+
+**1. Bootstrap ClassLoader:**
+
+- This is the first classloader and serves as the superclass of the Extension classloader.
+- It loads the `rt.jar` file, which contains class files for Java Standard Edition, including classes from packages such as `java.lang`, `java.net`, `java.util`, `java.io`, `java.sql`, and more.
+
+**2. Extension ClassLoader:**
+
+- A child classloader of the Bootstrap ClassLoader and the parent classloader of the System ClassLoader.
+- It loads JAR files located inside the `$JAVA_HOME/jre/lib/ext` directory.
+
+**3. System/Application ClassLoader:**
+
+- A child classloader of the Extension ClassLoader.
+- It loads class files from the classpath. By default, the classpath is set to the current directory.
+- Also known as the Application ClassLoader.
+
+Each classloader has a specific role in loading classes, and they form a hierarchy to efficiently manage class loading in Java.</p>
+
+</details>
+<details>
+  <summary>What are keywords in Java?</summary>
+  <br>
+  <p style="background-color: #f2f2f2; margin-left: 20px;">Keywords in Java are reserved words that have predefined meanings and cannot be used as identifiers (variable names, class names, etc.). They are an integral part of the Java programming language and serve specific purposes in defining the structure and behavior of a Java program. Some common Java keywords include:
+
+- **abstract**
+- **assert**
+- **boolean**
+- **break**
+- **byte**
+- **case**
+- **catch**
+- **char**
+- **class**
+- **const**
+- **continue**
+- **default**
+- **do**
+- **double**
+- **else**
+- **enum**
+- **extends**
+- **final**
+- **finally**
+- **float**
+- **for**
+- **if**
+- **implements**
+- **import**
+- **instanceof**
+- **int**
+- **interface**
+- **long**
+- **native**
+- **new**
+- **package**
+- **private**
+- **protected**
+- **public**
+- **return**
+- **short**
+- **static**
+- **strictfp**
+- **super**
+- **switch**
+- **synchronized**
+- **this**
+- **throw**
+- **throws**
+- **transient**
+- **try**
+- **void**
+- **volatile**
+- **while**
+
+These keywords play crucial roles in defining classes, methods, control flow, data types, and other aspects of Java programming.</p>
+
+</details>
+
+<details>
+  <summary>What is ENUM in Java?</summary>
+  <br>
+  <p style="background-color: #f2f2f2; margin-left: 20px;">In Java, an ENUM (enumeration) is a special data type that consists of a fixed set of constant values. It provides a way to create a group of related named constants, making the code more readable and maintainable. Enums were introduced in Java 5 to address the need for a type-safe way to represent a set of predefined values.
+
+Key characteristics of ENUMs in Java:
+
+- **Declaration:** Enums are declared using the `enum` keyword.
+
+- **Instance Creation:** Enum constants are created implicitly and are static and final. For example, if you declare an enum named `Color`, its constants (e.g., RED, GREEN, BLUE) are automatically created.
+
+- **Methods:** Enums can have methods, fields, and constructors. Each constant in the enum is an instance of the enum type.
+
+- **Iteration:** Enums can be iterated using the enhanced for loop, and the order of constants is the order in which they are declared.
+
+Example of a simple ENUM in Java:
+
+```java
+    enum Day {
+        SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY
+    }
+```
+</details>

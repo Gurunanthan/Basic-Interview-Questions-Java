@@ -112,9 +112,7 @@ The JIT compiler's dynamic compilation and optimization contribute to the effici
     Java applications can dynamically adapt to changing environments, supporting features like dynamic loading of classes.
 </details>
 
-Certainly! Here's the modified version without the additional headings:
 
-```markdown
 <details>
   <summary>9. How many types of memory areas are allocated by JVM?</summary>
   <br>
@@ -136,4 +134,4 @@ Certainly! Here's the modified version without the additional headings:
     Native Method Stack contains all the native methods used in the application.
 
 </details>
-```
+

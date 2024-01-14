@@ -1,22 +1,23 @@
-Certainly! Here are the Java interview questions with numbers:
 
+
+```markdown
 # Basic Java Interview Questions
 
- <details>
+ <details open>
   <summary>1. What is Java?</summary>
 
 Java is a versatile, high-level, object-oriented programming language known for its platform independence and portability. Developed by Sun Microsystems (now owned by Oracle), Java is designed to be simple, secure, and robust. It follows the "Write Once, Run Anywhere" (WORA) principle, allowing Java programs to run on any device with a Java Virtual Machine (JVM). Java supports multithreading, which enables concurrent execution of tasks, making it suitable for building scalable and responsive applications. Its rich standard library and extensive ecosystem of third-party libraries contribute to its popularity in various domains, including web development, mobile app development, enterprise solutions, and more.
 
 </details>
 
- <details>
+ <details open>
   <summary>2. Why is Java not a pure object-oriented language?</summary>
 
 Java is not considered a pure object-oriented language due to several factors. One reason is the inclusion of primitive data types (e.g., `int`, `float`, `char`) that are not treated as objects. Unlike in a pure object-oriented language, Java allows the use of these non-object types for efficiency and simplicity. Additionally, Java supports static members and methods, which are associated with the class itself rather than instances of the class. In a truly pure object-oriented language, all entities would be treated as objects, without the concept of static elements. Furthermore, Java's approach to inheritance differs from some pure object-oriented languages, as it supports interface-based multiple inheritance but not class-based multiple inheritance. Despite these deviations, Java remains predominantly object-oriented, emphasizing key OOP principles such as encapsulation, inheritance, and polymorphism in its design.
 
 </details>
 
- <details>
+ <details open>
   <summary>3. Difference between Heap and Stack Memory in Java and how Java utilizes them?</summary>
 
 In Java, memory management involves two main areas: Heap and Stack.
@@ -29,13 +30,13 @@ Stack memory, on the other hand, is employed for static memory allocation and ho
 
 </details>
 
- <details>
+ <details open>
   <summary>4. How Java Utilizes Heap and Stack?</summary>
 
 Java utilizes the heap and stack memory areas for efficient memory management. Objects and their associated data are created and stored in the heap memory, enabling dynamic memory allocation during runtime. The stack memory, dedicated to method execution, manages local variables and method calls, ensuring a thread-specific execution environment. The separation of heap and stack memory allows Java to strike a balance between flexibility and efficiency, preventing memory leaks through automatic garbage collection in the heap and handling method calls in the stack.
 
 </details>
- <details>
+ <details open>
   <summary>5. How is Java different from C++?</summary>
 
 Java and C++ differ in several key aspects. In terms of memory management, Java features automatic memory management with a garbage collector, while C++ provides developers with more control over memory but requires manual allocation and deallocation. Java is platform-independent, following the "Write Once, Run Anywhere" principle, compiling code into bytecode for execution on any device with a Java Virtual Machine (JVM). In contrast, C++ code needs separate compilation for each target platform, making it less portable.
@@ -48,7 +49,7 @@ These differences highlight distinct design philosophies and use cases, with Jav
 
 </details>
 
- <details>
+ <details open>
   <summary>6. What are the default values assigned to variables and instances in Java?</summary>
 
 In
@@ -64,7 +65,9 @@ Java, variables and instances are automatically assigned default values if they 
 
 **For Local Variables (method variables):**
 
-- Local variables are not automatically initialized. They must be explicitly assigned a value before use. If a local variable is accessed before being assigned, a compilation error occurs.
+- Local variables are
+
+ not automatically initialized. They must be explicitly assigned a value before use. If a local variable is accessed before being assigned, a compilation error occurs.
 
 **For Class (Static) Variables:**
 
@@ -74,7 +77,7 @@ These default values ensure that variables have predictable initial states, allo
 
 </details>
 
-<details>
+<details open>
   <summary>7. How does the JIT compiler work in Java?</summary>
 
 The Just-In-Time (JIT) compiler is a key component of the Java Virtual Machine (JVM) responsible for enhancing the performance of Java programs. Initially, Java source code is compiled into bytecode by the Java compiler. During program execution in the JVM, the bytecode is interpreted, and the JIT compiler intervenes to translate frequently executed portions, known as "hotspots," into native machine code at runtime.

@@ -162,7 +162,7 @@ Each classloader has a specific role in loading classes, and they form a hierarc
 
 </details>
 <details>
-  <summary>What are keywords in Java?</summary>
+  <summary>11. What are keywords in Java?</summary>
   <br>
   <p style="background-color: #f2f2f2; margin-left: 20px;">Keywords in Java are reserved words that have predefined meanings and cannot be used as identifiers (variable names, class names, etc.). They are an integral part of the Java programming language and serve specific purposes in defining the structure and behavior of a Java program. Some common Java keywords include:
 
@@ -221,7 +221,7 @@ These keywords play crucial roles in defining classes, methods, control flow, da
 </details>
 
 <details>
-  <summary>What is ENUM in Java?</summary>
+  <summary>12. What is ENUM in Java?</summary>
   <br>
   <p style="background-color: #f2f2f2; margin-left: 20px;">In Java, an ENUM (enumeration) is a special data type that consists of a fixed set of constant values. It provides a way to create a group of related named constants, making the code more readable and maintainable. Enums were introduced in Java 5 to address the need for a type-safe way to represent a set of predefined values.
 

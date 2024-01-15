@@ -292,7 +292,7 @@ int result2 = mathObj.add(2, 3, 5);      // Calls the second method
   <p style="background-color: #f2f2f2; margin-left: 20px;">Yes, constructors can be overloaded in Java. Constructor overloading involves defining multiple constructors for a class, each with a different parameter list. This allows objects of the class to be instantiated in different ways, providing flexibility and accommodating various initialization scenarios.</p>
 </details>
 <details>
-  <summary>Explain different types of constructors in Java with examples /summary>
+  <summary>16. Explain different types of constructors in Java with examples </summary>
 
 1. **Default Constructor:**
    A default constructor is one with no parameters. Java provides it automatically if a class doesn't define any constructors explicitly. It initializes the object with default values.

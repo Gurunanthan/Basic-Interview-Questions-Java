@@ -243,8 +243,6 @@ Example of a simple ENUM in Java:
     }
 ```
 </details>
-Certainly!
-
 <details>
   <summary>13. Memory Management in Java ?</summary>
   <p style="background-color: #f2f2f2; margin-left: 20px;">Java employs automatic memory management through garbage collection. In this approach, the Java Virtual Machine (JVM) automatically deallocates memory occupied by objects that are no longer reachable. Developers are relieved from direct control over memory allocation, minimizing the risk of memory leaks and simplifying memory management.</p>

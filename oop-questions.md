@@ -11,7 +11,7 @@
 </details>
 
 <details>
-  <summary>3. Mention the Use of OOP Concept<</summary>
+  <summary>3. Mention the Use of OOP Concept</summary>
   <br>
   <p style="background-color: #f2f2f2; margin-left: 20px;">Object-Oriented Programming (OOP) is a programming paradigm that organizes code into objects. The use of OOP provides benefits such as code reusability, modularity, and the ability to model real-world entities more effectively through classes and objects.</p>
 </details>
@@ -89,7 +89,7 @@
 </details>
 
 <details>
-  <summary>How to Create a Constructor </summary>
+  <summary>8. How to Create a Constructor </summary>
   <br>
   <p style="background-color: #f2f2f2; margin-left: 20px;">A constructor is created within a class by defining a method with the same name as the class. It does not have a return type, and it can take parameters for initializing the object's state. Here's an example:</p>
   
@@ -103,7 +103,7 @@
 </details>
 
 <details>
-  <summary>8. What Concepts Are There in OOP </summary>
+  <summary>9. What Concepts Are There in OOP </summary>
   <br>
   <p style="background-color: #f2f2f2; margin-left: 20px;">Key concepts in Object-Oriented Programming include:
     <ul>
@@ -117,7 +117,7 @@
 </details>
 
 <details>
-  <summary>9. What Is Inheritance </summary>
+  <summary>10. What Is Inheritance </summary>
   <br>
   <p style="background-color: #f2f2f2; margin-left: 20px;">Inheritance is a fundamental concept in OOP where a class (subclass or derived class) inherits the properties and behaviors of another class (superclass or base class). It promotes code reusability and establishes an "is-a" relationship between classes.</p>
   <p style="background-color: #f2f2f2; margin-left: 20px;">Example:</p>
@@ -148,29 +148,29 @@
 )
 myDog.bark(); // Output: Dog is barking.
 
-  ````
+````
 </details>
 <details>
-  <summary>9. What Is Polymorphism </summary>
-  <br>
+<summary>11. What Is Polymorphism </summary>
+<br>
 <p style="background-color: #f2f2f2; margin-left: 20px;">Polymorphism allows objects of different types to be treated as objects of a common type. There are two types of polymorphism:</p>
 <ul style="background-color: #f2f2f2; margin-left: 20px;">
-  <li>Compile-Time Polymorphism:< Achieved through method overloading where multiple methods have the same name but different parameters.</li>
-  <li>Runtime Polymorphism:< Achieved through method overriding where a subclass provides a specific implementation for a method defined in its superclass.</li>
+<li>Compile-Time Polymorphism:< Achieved through method overloading where multiple methods have the same name but different parameters.</li>
+<li>Runtime Polymorphism:< Achieved through method overriding where a subclass provides a specific implementation for a method defined in its superclass.</li>
 </ul>
 <p style="background-color: #f2f2f2; margin-left: 20px;">Example of Compile-Time Polymorphism:</p>
 
 ```java
 class MathOperations {
-    // Method to add two integers
-    int add(int a, int b) {
-        return a + b;
-    }
+  // Method to add two integers
+  int add(int a, int b) {
+      return a + b;
+  }
 
-    // Method to add three integers
-    int add(int a, int b, int c) {
-        return a + b + c;
-    }
+  // Method to add three integers
+  int add(int a, int b, int c) {
+      return a + b + c;
+  }
 }
 
 // Using Compile-Time Polymorphism
@@ -204,7 +204,7 @@ int result2 = mathObj.add(2, 3, 5);      // Calls the second method
 </details>
 
 <details>
-  <summary>10.What Is Abstraction </summary>
+  <summary>12.What Is Abstraction </summary>
   <br>
   <p style="background-color: #f2f2f2; margin-left: 20px;">Abstraction is the process of hiding the complex implementation details and showing only the essential features of an object. Abstract classes and interfaces are used to achieve abstraction in Java.</p>
   <p style="background-color: #f2f2f2; margin-left: 20px;">Example using an Abstract Class:</p>
@@ -231,7 +231,7 @@ int result2 = mathObj.add(2, 3, 5);      // Calls the second method
 </details>
 
 <details>
-  <summary>11. What Is Encapsulation </summary>
+  <summary>13. What Is Encapsulation </summary>
   <br>
   <p style="background-color: #f2f2f2; margin-left: 20px;">Encapsulation is the bundling of data (attributes) and methods (functions) that operate on the data into a single unit known as a class. It restricts direct access to some of the object's components, promoting data integrity and security.</p>
   <p style="background-color: #f2f2f2; margin-left: 20px;">Example:</p>
@@ -261,7 +261,7 @@ int result2 = mathObj.add(2, 3, 5);      // Calls the second method
 </details>
 
 <details>
-  <summary>12. What Are the Two Types of Polymorphism </summary>
+  <summary>14. What Are the Two Types of Polymorphism </summary>
   <br>
   <p style="background-color: #f2f2f2; margin-left: 20px;">The two types of polymorphism are:</p>
   <ul style="background-color: #f2f2f2; margin-left: 20px;">
@@ -271,28 +271,28 @@ int result2 = mathObj.add(2, 3, 5);      // Calls the second method
 </details>
 
 <details>
-  <summary>13. What Are the Types of Inheritance in Java </summary>
+  <summary>15. What Are the Types of Inheritance in Java </summary>
   <br>
   <p style="background-color: #f2f2f2; margin-left: 20px;">Types of inheritance in Java include:</p>
   <ul style="background-color: #f2f2f2; margin-left: 20px;">
-    <li>Single Inheritance:< A class can inherit from only one superclass.</li>
-    <li>Multiple Inheritance (achieved through interfaces):< A class can implement multiple interfaces, allowing it to inherit from more than one type.</li>
-    <li>Multilevel Inheritance:< A class can inherit from a class, and another class can inherit from it, forming a chain of inheritance.</li>
-    <li>Hierarchical Inheritance:< Multiple classes can inherit from a single superclass, forming a hierarchy of classes.</li>
+    <li>Single Inheritance: A class can inherit from only one superclass.</li>
+    <li>Multiple Inheritance (achieved through interfaces): A class can implement multiple interfaces, allowing it to inherit from more than one type.</li>
+    <li>Multilevel Inheritance: A class can inherit from a class, and another class can inherit from it, forming a chain of inheritance.</li>
+    <li>Hierarchical Inheritance: Multiple classes can inherit from a single superclass, forming a hierarchy of classes.</li>
   </ul>
 </details>
 
 <details>
-  <summary>14. Can a Constructor be Inherited </summary>
+  <summary>16. Can a Constructor be Inherited </summary>
   <p style="background-color: #f2f2f2; margin-left: 20px;">In object-oriented programming, a constructor is not inherited by subclasses. However, when a subclass is created, the constructor of its superclass is implicitly called to initialize the inherited members. This process is part of the subclass's instantiation but doesn't involve the direct inheritance of the constructor itself.</p>
 </details>
 
 <details>
-  <summary>15. Can a Constructor be Overloaded </summary>
+  <summary>17. Can a Constructor be Overloaded </summary>
   <p style="background-color: #f2f2f2; margin-left: 20px;">Yes, constructors can be overloaded in Java. Constructor overloading involves defining multiple constructors for a class, each with a different parameter list. This allows objects of the class to be instantiated in different ways, providing flexibility and accommodating various initialization scenarios.</p>
 </details>
 <details>
-  <summary>16. Explain different types of constructors in Java with examples </summary>
+  <summary>18. Explain different types of constructors in Java with examples </summary>
 
 1. **Default Constructor:**
    A default constructor is one with no parameters. Java provides it automatically if a class doesn't define any constructors explicitly. It initializes the object with default values.

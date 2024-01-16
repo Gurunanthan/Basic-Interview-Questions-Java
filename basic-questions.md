@@ -528,3 +528,190 @@ Example of a simple ENUM in Java:
   - **Scaling Predictions:** Big O provides insights into how the algorithm's performance scales with the input size, helping predict how the algorithm will perform as the problem size increases.
   - **Optimization Guidance:** It guides optimization efforts by highlighting areas of the algorithm that have the most impact on performance.
 </details>
+
+
+<details>
+  <summary>32. Difference between final and finalize:</summary>
+
+  | Feature           | final                                    | finalize                              |
+  |-------------------|------------------------------------------|---------------------------------------|
+  | Usage             | Used with variables, methods, and classes to make them unmodifiable, unextendable, or unchanged. | A method in the Object class that is called by the garbage collector before an object is garbage collected. |
+  | Scope             | Applicable to variables, methods, and classes. | Specifically related to garbage collection in Java and is part of the Object class. |
+  | Purpose           | Provides immutability, prevents method overriding, and restricts class extension. | Intended for cleanup operations before an object is reclaimed by the garbage collector. |
+  | Inheritance       | Can be used in class declarations to prevent further subclassing. | Not directly related to inheritance. |
+  | Keyword Usage     | `final` keyword is used.                     | `finalize()` method is used.            |
+
+</details>
+<details>
+  <summary>33. Explain pass by value and pass by reference in Java.</summary>
+
+In Java, when passing arguments to methods, the terms "pass by value" and "pass by reference" are often used to describe how the values are transferred.
+
+1. **Pass by Value:**
+   - Java is strictly "pass by value." This means that when you pass a primitive data type (like `int`, `float`, etc.) to a method, you are passing a copy of the actual value.
+   - Modifications to the parameter inside the method do not affect the original value outside the method.
+
+   ```java
+   public class PassByValueExample {
+       public static void main(String[] args) {
+           int number = 5;
+           modifyValue(number);
+           System.out.println("Original value: " + number);
+       }
+
+       static void modifyValue(int num) {
+           num = num * 2;
+           System.out.println("Modified value: " + num);
+       }
+   }
+   ```
+
+   In this example, the modification inside the `modifyValue` method does not affect the original `number` outside the method.
+
+2. **Pass by Reference (not applicable in Java):**
+   - In some programming languages, "pass by reference" means passing a reference (memory address) to the original variable. Changes made to the parameter inside the method reflect in the original variable.
+   - Java, however, does not support true pass by reference for objects. When you pass an object to a method, you are passing the reference to the object by value.
+
+   ```java
+   public class PassByReferenceExample {
+       public static void main(String[] args) {
+           StringBuilder text = new StringBuilder("Hello");
+           modifyText(text);
+           System.out.println("Original text: " + text);
+       }
+
+       static void modifyText(StringBuilder str) {
+           str.append(", World!");
+           System.out.println("Modified text: " + str);
+       }
+   }
+   ```
+
+   In this example, the modifications inside the `modifyText` method affect the original `text` outside the method. However, it's crucial to understand that the reference itself is passed by value, not the object.
+</details>
+<details>
+  <summary>34. Explain wrapper classes in Java.</summary>
+
+Wrapper classes in Java serve as a mechanism to convert primitive data types into objects. They "wrap" primitive data types in an object so that they can be included in activities reserved for objects, like being added to collections. The Java programming language provides a set of wrapper classes for each primitive data type.
+
+**Example:**
+
+```java
+// Primitive data type
+int primitiveInt = 42;
+
+// Wrapper class for int
+Integer wrappedInt = Integer.valueOf(primitiveInt);
+
+// Performing operations with the wrapper class
+int result = wrappedInt + 10;
+
+// Converting back to primitive data type
+int unwrappedInt = wrappedInt.intValue();
+```
+
+In the example above, `Integer` is the wrapper class for the `int` primitive data type. It allows the primitive `int` to be used in contexts where objects are required. The process of converting a primitive type to its corresponding wrapper class is called autoboxing, and the reverse process is called unboxing.
+
+Wrapper classes also provide utility methods for various operations, making it convenient to work with primitive types in an object-oriented manner. Common wrapper classes include `Integer`, `Double`, `Boolean`, etc., each corresponding to a specific primitive type.
+</details>
+<details>
+  <summary>35. Explain constructor overloading in Java.</summary>
+
+Constructor overloading in Java refers to the concept of defining multiple constructors within a class, each having a different set of parameters. This allows a class to provide multiple ways to instantiate objects, accommodating various initialization scenarios.
+
+**Example:**
+
+```java
+public class MyClass {
+    int value;
+
+    // Constructor with no parameters
+    public MyClass() {
+        value = 0;
+    }
+
+    // Constructor with a single parameter
+    public MyClass(int initialValue) {
+        value = initialValue;
+    }
+
+    // Constructor with two parameters
+    public MyClass(int initialValue, boolean doubleValue) {
+        value = doubleValue ? 2 * initialValue : initialValue;
+    }
+}
+
+// Instantiating objects using different constructors
+MyClass obj1 = new MyClass();              // Initializes with default value
+MyClass obj2 = new MyClass(10);            // Initializes with specified value
+MyClass obj3 = new MyClass(5, true);       // Initializes with doubled value
+```
+
+In the example above, the `MyClass` class has three constructors, each catering to different initialization requirements. The appropriate constructor is chosen based on the number and types of arguments provided during object instantiation. This flexibility enhances the usability and versatility of the class.
+</details>
+<details>
+  <summary>36. Garbage Collection in Java:</summary>
+
+  <p style="background-color: #f2f2f2; margin-left: 20px;">Garbage collection in Java is the automatic process of identifying and reclaiming the memory occupied by objects that are no longer reachable or in use by the program. Java employs an automatic garbage collector to handle memory management, relieving developers from manually deallocating memory.</p>
+
+  <p style="background-color: #f2f2f2; margin-left: 20px;"><strong>Functions in Garbage Collection:</strong></p>
+
+  <ol style="background-color: #f2f2f2; margin-left: 40px;">
+    <li><strong>Identification of Unreachable Objects:</strong> The garbage collector identifies objects that are no longer reachable from the root of the object graph, typically starting from the main method.</li>
+    <li><strong>Reclamation of Memory:</strong> Once unreachable objects are identified, the garbage collector reclaims the memory occupied by these objects, making it available for new allocations.</li>
+    <li><strong>Compactification (Optional):</strong> Some garbage collectors perform compactification, where the remaining objects are moved to a contiguous block of memory, reducing memory fragmentation.</li>
+  </ol>
+
+  <p style="background-color: #f2f2f2; margin-left: 20px;"><strong>Java Garbage Collection Process:</strong></p>
+
+  <p style="background-color: #f2f2f2; margin-left: 40px;">Java uses a generational garbage collection algorithm, primarily dividing the heap into two main areas: the Young Generation and the Old Generation.</p>
+
+  <ol style="background-color: #f2f2f2; margin-left: 40px;">
+    <li><strong>Young Generation:</strong> Newly created objects are initially allocated in the Young Generation. A Minor Garbage Collection is performed frequently in this area.</li>
+    <li><strong>Old Generation:</strong> Objects that survive multiple Minor Garbage Collections are eventually moved to the Old Generation. Major Garbage Collection is less frequent but involves the entire heap.</li>
+    <li><strong>Garbage Collector Types:</strong> Java has various garbage collector implementations, such as Serial, Parallel, CMS (Concurrent Mark-Sweep), G1 (Garbage First), each suited for different scenarios and performance requirements.</li>
+  </ol>
+
+  <p style="background-color: #f2f2f2; margin-left: 20px;">In summary, Java's garbage collection automates memory management by identifying and reclaiming memory occupied by unreachable objects, ensuring efficient and reliable memory usage in Java applications.</p>
+</details>
+
+<details>
+  <summary>37. Difference between `static` and `final` Keywords:</summary>
+
+  <table style="background-color: #f2f2f2; margin-left: 20px; border-collapse: collapse; width: 80%;">
+    <tr>
+      <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Feature</th>
+      <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`static` Keyword</th>
+      <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`final` Keyword</th>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #dddddd; padding: 8px;">Scope</td>
+      <td style="border: 1px solid #dddddd; padding: 8px;">Belongs to the class and shared among all instances of the class.</td>
+      <td style="border: 1px solid #dddddd; padding: 8px;">Indicates that a variable, method, or class cannot be changed or overridden.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #dddddd; padding: 8px;">Usage (Variable)</td>
+      <td style="border: 1px solid #dddddd; padding: 8px;">Used to create class-level variables or methods that are shared among all instances.</td>
+      <td style="border: 1px solid #dddddd; padding: 8px;">Used to create constants (immutable variables) that cannot be modified after initialization.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #dddddd; padding: 8px;">Usage (Method)</td>
+      <td style="border: 1px solid #dddddd; padding: 8px;">Used to create class-level methods that can be called without creating an instance of the class.</td>
+      <td style="border: 1px solid #dddddd; padding: 8px;">Used to indicate that a method cannot be overridden by subclasses.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #dddddd; padding: 8px;">Memory Allocation</td>
+      <td style="border: 1px solid #dddddd; padding: 8px;">Memory is allocated once for the `static` variable or method in the class area.</td>
+      <td style="border: 1px solid #dddddd; padding: 8px;">Memory is allocated when the `final` variable is initialized, and it cannot be changed afterwards.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #dddddd; padding: 8px;">Inheritance</td>
+      <td style="border: 1px solid #dddddd; padding: 8px;">`static` members can be inherited, and changes to them in a subclass affect the superclass.</td>
+      <td style="border: 1px solid #dddddd; padding: 8px;">`final` members cannot be overridden in subclasses, preserving their functionality.</td>
+    </tr>
+  </table>
+
+  <p style="background-color: #f2f2f2; margin-left: 20px;">In summary, the `static` keyword is used for creating class-level variables and methods that are shared among all instances, while the `final` keyword is used for indicating immutability, making variables, methods, or classes unchangeable or unextendable.</p>
+</details>
+
+If you have more questions or need further clarification, feel free to ask!

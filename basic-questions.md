@@ -395,7 +395,7 @@ Example of a simple ENUM in Java:
 </details>
 
 <details>
-  <summary>29. Difference between Stacks, Queues, and Linked Lists:</summary>
+  <summary>29. Difference between Stacks, Queues, and Linked Lists ?</summary>
   <p style="background-color: #f2f2f2; margin-left: 20px;">Stacks, queues, and linked lists are fundamental data structures, each serving specific purposes.</p>
   - **Stack:** Follows Last In, First Out (LIFO) order. Elements are added and removed from the same end, known as the "top" of the stack.
   - **Queue:** Follows First In, First Out (FIFO) order. Elements are added at the rear (enqueue) and removed from the front (dequeue) of the queue.
@@ -403,7 +403,7 @@ Example of a simple ENUM in Java:
 </details>
 
 <details>
-  <summary>30. Simple Stack and Queue Implementation in Java:</summary>
+  <summary>30. Simple Stack and Queue Implementation in Java ?</summary>
 
   <details>
     <summary>**Stack Implementation:**</summary>
@@ -521,8 +521,8 @@ Example of a simple ENUM in Java:
 </details>
 
 <details>
-  <summary>31. Big O Notation and its Importance:</summary>
-  <p style="background-color: #f2f2f2; margin-left: 20px;">Big O notation is a mathematical notation that describes the performance or complexity of an algorithm. It provides an upper bound on the growth rate of the algorithm in the worst-case scenario. The notation is crucial in algorithm analysis for the following reasons:</p>
+  <summary>31. Big O Notation and its Importance ?</summary>
+  <p style="background-color: #f2f2f2; margin-left: 20px;">Big O notation is a mathematical notation that describes the performance or complexity of an algorithm. It provides an upper bound on the growth rate of the algorithm in the worst-case scenario. The notation is crucial in algorithm analysis for the following reasons ?</p>
   - **Quantifying Efficiency:** Big O notation allows us to express the efficiency of algorithms in a standardized way, making it easier to compare and analyze different algorithms.
   - **Identifying Dominant Operations:** It helps in identifying the operations that dominate the overall runtime as the input size grows, focusing on the most significant factors.
   - **Scaling Predictions:** Big O provides insights into how the algorithm's performance scales with the input size, helping predict how the algorithm will perform as the problem size increases.
@@ -531,7 +531,7 @@ Example of a simple ENUM in Java:
 
 
 <details>
-  <summary>32. Difference between final and finalize:</summary>
+  <summary>32. Difference between final and finalize ?</summary>
 
   | Feature           | final                                    | finalize                              |
   |-------------------|------------------------------------------|---------------------------------------|
@@ -650,33 +650,33 @@ MyClass obj3 = new MyClass(5, true);       // Initializes with doubled value
 In the example above, the `MyClass` class has three constructors, each catering to different initialization requirements. The appropriate constructor is chosen based on the number and types of arguments provided during object instantiation. This flexibility enhances the usability and versatility of the class.
 </details>
 <details>
-  <summary>36. Garbage Collection in Java:</summary>
+  <summary>36. Garbage Collection in Java ?</summary>
 
   <p style="background-color: #f2f2f2; margin-left: 20px;">Garbage collection in Java is the automatic process of identifying and reclaiming the memory occupied by objects that are no longer reachable or in use by the program. Java employs an automatic garbage collector to handle memory management, relieving developers from manually deallocating memory.</p>
 
-  <p style="background-color: #f2f2f2; margin-left: 20px;"><strong>Functions in Garbage Collection:</strong></p>
+  <p style="background-color: #f2f2f2; margin-left: 20px;"><strong>Functions in Garbage Collection ?</strong></p>
 
   <ol style="background-color: #f2f2f2; margin-left: 40px;">
-    <li><strong>Identification of Unreachable Objects:</strong> The garbage collector identifies objects that are no longer reachable from the root of the object graph, typically starting from the main method.</li>
-    <li><strong>Reclamation of Memory:</strong> Once unreachable objects are identified, the garbage collector reclaims the memory occupied by these objects, making it available for new allocations.</li>
-    <li><strong>Compactification (Optional):</strong> Some garbage collectors perform compactification, where the remaining objects are moved to a contiguous block of memory, reducing memory fragmentation.</li>
+    <li><strong>Identification of Unreachable Objects ?</strong> The garbage collector identifies objects that are no longer reachable from the root of the object graph, typically starting from the main method.</li>
+    <li><strong>Reclamation of Memory ?</strong> Once unreachable objects are identified, the garbage collector reclaims the memory occupied by these objects, making it available for new allocations.</li>
+    <li><strong>Compactification (Optional) ?</strong> Some garbage collectors perform compactification, where the remaining objects are moved to a contiguous block of memory, reducing memory fragmentation.</li>
   </ol>
 
-  <p style="background-color: #f2f2f2; margin-left: 20px;"><strong>Java Garbage Collection Process:</strong></p>
+  <p style="background-color: #f2f2f2; margin-left: 20px;"><strong>Java Garbage Collection Process ?</strong></p>
 
   <p style="background-color: #f2f2f2; margin-left: 40px;">Java uses a generational garbage collection algorithm, primarily dividing the heap into two main areas: the Young Generation and the Old Generation.</p>
 
   <ol style="background-color: #f2f2f2; margin-left: 40px;">
-    <li><strong>Young Generation:</strong> Newly created objects are initially allocated in the Young Generation. A Minor Garbage Collection is performed frequently in this area.</li>
-    <li><strong>Old Generation:</strong> Objects that survive multiple Minor Garbage Collections are eventually moved to the Old Generation. Major Garbage Collection is less frequent but involves the entire heap.</li>
-    <li><strong>Garbage Collector Types:</strong> Java has various garbage collector implementations, such as Serial, Parallel, CMS (Concurrent Mark-Sweep), G1 (Garbage First), each suited for different scenarios and performance requirements.</li>
+    <li><strong>Young Generation ?</strong> Newly created objects are initially allocated in the Young Generation. A Minor Garbage Collection is performed frequently in this area.</li>
+    <li><strong>Old Generation ?</strong> Objects that survive multiple Minor Garbage Collections are eventually moved to the Old Generation. Major Garbage Collection is less frequent but involves the entire heap.</li>
+    <li><strong>Garbage Collector Types ?</strong> Java has various garbage collector implementations, such as Serial, Parallel, CMS (Concurrent Mark-Sweep), G1 (Garbage First), each suited for different scenarios and performance requirements.</li>
   </ol>
 
   <p style="background-color: #f2f2f2; margin-left: 20px;">In summary, Java's garbage collection automates memory management by identifying and reclaiming memory occupied by unreachable objects, ensuring efficient and reliable memory usage in Java applications.</p>
 </details>
 
 <details>
-  <summary>37. Difference between `static` and `final` Keywords:</summary>
+  <summary>37. Difference between `static` and `final` Keywords ?</summary>
 
   <table style="background-color: #f2f2f2; margin-left: 20px; border-collapse: collapse; width: 80%;">
     <tr>
@@ -713,5 +713,219 @@ In the example above, the `MyClass` class has three constructors, each catering 
 
   <p style="background-color: #f2f2f2; margin-left: 20px;">In summary, the `static` keyword is used for creating class-level variables and methods that are shared among all instances, while the `final` keyword is used for indicating immutability, making variables, methods, or classes unchangeable or unextendable.</p>
 </details>
+<details>
+  <summary>Difference between Byte Streams and Character Streams in File Handling ?</summary>
 
-If you have more questions or need further clarification, feel free to ask!
+  <table style="background-color: #f2f2f2; margin-left: 20px; border-collapse: collapse; width: 80%;">
+    <tr>
+      <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Aspect</th>
+      <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Byte Streams</th>
+      <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Character Streams</th>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #dddddd; padding: 8px;">Data Representation</td>
+      <td style="border: 1px solid #dddddd; padding: 8px;">Deal with raw binary data (bytes).</td>
+      <td style="border: 1px solid #dddddd; padding: 8px;">Deal with characters and are suited for text data.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #dddddd; padding: 8px;">Encoding</td>
+      <td style="border: 1px solid #dddddd; padding: 8px;">No encoding is performed; they work with the raw binary data.</td>
+      <td style="border: 1px solid #dddddd; padding: 8px;">Use character encoding (like UTF-8) to convert characters to bytes and vice versa.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #dddddd; padding: 8px;">Readability</td>
+      <td style="border: 1px solid #dddddd; padding: 8px;">Suitable for all types of data, including binary.</td>
+      <td style="border: 1px solid #dddddd; padding: 8px;">Designed for reading and writing text-based data.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #dddddd; padding: 8px;">Example Classes</td>
+      <td style="border: 1px solid #dddddd; padding: 8px;">`FileInputStream`, `FileOutputStream`</td>
+      <td style="border: 1px solid #dddddd; padding: 8px;">`FileReader`, `FileWriter`</td>
+    </tr>
+  </table>
+
+  <p style="background-color: #f2f2f2; margin-left: 20px;">In summary, byte streams are used for handling raw binary data, while character streams are specialized for handling text data with character encoding.</p>
+</details>
+
+<details>
+  <summary>Steps Involved in Reading Data from a File ?</summary>
+
+  1. **Create a File Object:**
+     ```java
+     File file = new File("example.txt");
+     ```
+
+  2. **Create a FileReader or FileInputStream:**
+     - For character data:
+       ```java
+       FileReader reader = new FileReader(file);
+       ```
+     - For binary data:
+       ```java
+       FileInputStream fis = new FileInputStream(file);
+       ```
+
+  3. **Create a BufferedReader or DataInputStream:**
+     - For efficient reading of characters:
+       ```java
+       BufferedReader bufferedReader = new BufferedReader(reader);
+       ```
+     - For binary data:
+       ```java
+       DataInputStream dis = new DataInputStream(fis);
+       ```
+
+  4. **Read Data:**
+     - For characters:
+       ```java
+       String line = bufferedReader.readLine();
+       ```
+     - For binary data:
+       ```java
+       int data = dis.read();
+       ```
+
+  5. **Close the Streams:**
+     ```java
+     bufferedReader.close(); // or dis.close();
+     ```
+
+</details>
+
+<details>
+  <summary>Steps for Writing Data to a File ?</summary>
+
+  1. **Create a File Object:**
+     ```java
+     File file = new File("example.txt");
+     ```
+
+  2. **Create a FileWriter or FileOutputStream:**
+     - For character data:
+       ```java
+       FileWriter writer = new FileWriter(file);
+       ```
+     - For binary data:
+       ```java
+       FileOutputStream fos = new FileOutputStream(file);
+       ```
+
+  3. **Create a BufferedWriter or DataOutputStream:**
+     - For efficient writing of characters:
+       ```java
+       BufferedWriter bufferedWriter = new BufferedWriter(writer);
+       ```
+     - For binary data:
+       ```java
+       DataOutputStream dos = new DataOutputStream(fos);
+       ```
+
+  4. **Write Data:**
+     - For characters:
+       ```java
+       bufferedWriter.write("Hello, World!");
+       ```
+     - For binary data:
+       ```java
+       dos.write(65); // Example: Writing an ASCII character 'A'
+       ```
+
+  5. **Close the Streams:**
+     ```java
+     bufferedWriter.close(); // or dos.close();
+     ```
+
+</details>
+
+<details>
+  <summary>Creating a New File and Directory in Java ?</summary>
+
+  - **Create a New File:**
+    ```java
+    File newFile = new File("newFile.txt");
+    newFile.createNewFile();
+    ```
+
+  - **Create a New Directory:**
+    ```java
+    File newDir = new File("newDirectory");
+    newDir.mkdir();
+    ```
+
+</details>
+
+<details>
+  <summary>Methods to Check if a File or Directory Exists ?</summary>
+
+  - **Check if a File Exists:**
+    ```java
+    File file = new File("example.txt");
+    boolean fileExists = file.exists();
+    ```
+
+  - **Check if a Directory Exists:**
+    ```java
+    File directory = new File("exampleDirectory");
+    boolean directoryExists = directory.exists();
+    ```
+
+</details>
+
+<details>
+  <summary>Difference between Deleting a File and Deleting a Directory ?</summary>
+
+  - **Deleting a File:**
+    ```java
+    File file = new File("example.txt");
+    boolean deleted = file.delete();
+    ```
+
+  - **Deleting a Directory:**
+    ```java
+    File directory = new File("exampleDirectory");
+    boolean deleted = directory.delete();
+    ```
+
+  Note: The directory must be empty for `delete()` to succeed. If it's not empty, you need to delete its contents recursively.
+
+</details>
+
+<details>
+  <summary>Getting Information about a File ?</summary>
+
+  ```java
+  File file = new File("example.txt");
+
+  // Getting File Information
+  String fileName = file.getName();
+  String filePath = file.getAbsolutePath();
+  long fileSize = file.length();
+  long lastModified = file.lastModified();
+
+  // Displaying Information
+  System.out.println("Name: " + fileName);
+  System.out.println("Path: " + filePath);
+  System.out.println("Size: " + fileSize + " bytes");
+  System.out.println("Last Modified: " + new Date(lastModified));
+  ```
+
+</details>
+
+<details>
+  <summary>Renaming a File or Directory in Java ?</summary>
+
+  - **Renaming a File:**
+    ```java
+    File oldFile = new File("oldName.txt");
+    File newFile = new File("newName.txt");
+    boolean renamed = oldFile.renameTo(newFile);
+    ```
+
+  - **Renaming a Directory:**
+    ```java
+    File oldDir = new File("oldDirectory");
+    File newDir = new File("newDirectory");
+    boolean renamed = oldDir.renameTo(newDir);
+    ```
+
+</details>
